@@ -32,7 +32,6 @@ export default tseslint.config(
       "eslint.config.mjs",
       "babel.config.js",
       " expo-env.d.ts",
-      "scripts/*",
     ],
   },
   js.configs.recommended,

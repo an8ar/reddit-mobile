@@ -8,7 +8,7 @@ import prettierPlugin from "eslint-plugin-prettier";
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintImport from "eslint-plugin-import";
 import eslintUnused from "eslint-plugin-unused-imports";
-import { fixupPluginRules } from "@eslint/compat";
+import { fixupPluginRules, fixupConfigRules } from "@eslint/compat";
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default tseslint.config(
@@ -23,6 +23,7 @@ export default tseslint.config(
       "unused-imports": eslintUnused,
     },
   },
+  { ...fixupConfigRules(eslintImport) },
   {
     ignores: [
       "dist",
@@ -69,7 +70,7 @@ export default tseslint.config(
       "react/jsx-filename-extension": [
         "warn",
         {
-          extensions: [".tsx"],
+          extensions: [".tsx", ".ts"],
         },
       ],
       // https://stackoverflow.com/questions/63696724/eslint-problem-with-default-props-in-functional-component-typescript-react

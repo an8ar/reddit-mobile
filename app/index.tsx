@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { Text } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Home = () => {
   return (
     <SafeAreaView>
-      <Text className="text-3xl">Homessss</Text>
+      <Text className="rounded-sm bg-slate-500 text-3xl">Homessss</Text>
     </SafeAreaView>
   );
 };

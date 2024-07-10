@@ -7,11 +7,20 @@ import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: '#1e293b' }}>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: '#09090b',
+        tabBarInactiveTintColor: '#94a3b8',
+        tabBarStyle: {
+          paddingTop: 4,
+        },
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
+          headerShown: false,
           tabBarIcon: ({ color }) => <FontAwesome size={32} name="home" color={color} />,
         }}
       />
@@ -19,6 +28,7 @@ export default function TabLayout() {
         name="communities"
         options={{
           title: 'Communities',
+          headerShown: false,
           tabBarIcon: ({ color }) => <Ionicons size={32} name="people-outline" color={color} />,
         }}
       />

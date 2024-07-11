@@ -12,13 +12,18 @@ export function RightDrawerScreen() {
   const toggleDrawer = () => {
     setRightDrawerOpen((prev) => !prev);
   };
+
+  const handleClose = () => {
+    setRightDrawerOpen(false);
+  };
+
   return (
     <Drawer
       open={rightDrawerOpen}
       onOpen={() => setRightDrawerOpen(true)}
       onClose={() => setRightDrawerOpen(false)}
       drawerPosition="right"
-      renderDrawerContent={() => <UserDrawerContent />}
+      renderDrawerContent={() => <UserDrawerContent handleClose={handleClose} />}
       drawerStyle={{ width: '80%' }}
     >
       <LeftDrawerScreen toggleRightDrawer={toggleDrawer} />

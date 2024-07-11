@@ -1,13 +1,19 @@
-import React from "react";
+import React from 'react';
+import { store } from './store';
+import { Provider } from 'react-redux';
 
-import { View, Text } from "react-native";
+import { View, Text } from 'react-native';
+import { RightDrawerScreen } from '~/shared';
+import { UserDrawerContent } from '~/entities/user';
 
-const Index = () => {
+const App = () => {
   return (
-    <View>
-      <Text>inde wwwwwx</Text>
-    </View>
+    <Provider store={store}>
+      <RightDrawerScreen>
+        <UserDrawerContent />
+      </RightDrawerScreen>
+    </Provider>
   );
 };
 
-export default Index;
+export default App;

@@ -4,8 +4,8 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { UserDrawerContent } from '~/entities/user/';
-import { RightDrawerScreen } from '~/shared';
+import App from '~/app-root';
+
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
@@ -25,9 +25,7 @@ export default function RootLayout() {
   }
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <RightDrawerScreen>
-        <UserDrawerContent />
-      </RightDrawerScreen>
+      <App />
     </GestureHandlerRootView>
   );
 }

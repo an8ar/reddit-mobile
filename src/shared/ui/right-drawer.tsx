@@ -8,6 +8,7 @@ interface Props {
 
 export function RightDrawerScreen({ children }: Props) {
   const [rightDrawerOpen, setRightDrawerOpen] = React.useState(false);
+
   const toggleDrawer = () => {
     setRightDrawerOpen((prev) => !prev);
   };

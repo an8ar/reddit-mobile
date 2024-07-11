@@ -19,6 +19,7 @@ export function RightDrawerScreen() {
       onClose={() => setRightDrawerOpen(false)}
       drawerPosition="right"
       renderDrawerContent={() => <UserDrawerContent />}
+      drawerStyle={{ width: '80%' }}
     >
       <LeftDrawerScreen toggleRightDrawer={toggleDrawer} />
     </Drawer>

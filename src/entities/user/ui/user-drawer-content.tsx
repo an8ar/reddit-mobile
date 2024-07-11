@@ -1,11 +1,16 @@
 import React from 'react';
 
-import { DrawerContentScrollView } from '@react-navigation/drawer';
 import { View, Text } from 'react-native';
 
-export const UserDrawerContent = () => {
+import { UserDrawerLayout } from './user-drawer-layout';
+
+interface Props {
+  handleClose: () => void;
+}
+
+export const UserDrawerContent = ({ handleClose }: Props) => {
   return (
-    <DrawerContentScrollView>
+    <UserDrawerLayout handleClose={handleClose}>
       <View className="gap-10">
         <Text>UserDrawerContent</Text>
         <Text>UserDrawerContent</Text>
@@ -14,6 +19,6 @@ export const UserDrawerContent = () => {
 
         <Text>UserDrawerContent</Text>
       </View>
-    </DrawerContentScrollView>
+    </UserDrawerLayout>
   );
 };

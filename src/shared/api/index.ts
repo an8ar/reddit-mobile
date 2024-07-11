@@ -1,1 +1,1 @@
-export const API = "fakeApi";
+export const API = 'fakeApi';

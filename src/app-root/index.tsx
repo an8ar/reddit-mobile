@@ -1,10 +1,11 @@
 import React from 'react';
-import { store } from './store';
+
 import { Provider } from 'react-redux';
 
-import { View, Text } from 'react-native';
-import { RightDrawerScreen } from '~/shared';
 import { UserDrawerContent } from '~/entities/user';
+import { RightDrawerScreen } from '~/shared';
+
+import { store } from './store';
 
 const App = () => {
   return (

@@ -1,6 +1,7 @@
-import { View, Text } from 'react-native';
 import React from 'react';
+
 import { DrawerContentScrollView } from '@react-navigation/drawer';
+import { View, Text } from 'react-native';
 
 export const UserDrawerContent = () => {
   return (

@@ -1,4 +1,5 @@
 import { PayloadAction, createSlice, nanoid } from '@reduxjs/toolkit';
+
 import { FormValuesProps, Post, PostsState } from './types';
 
 const initialState: PostsState = {
@@ -49,13 +50,13 @@ export const postSlice = createSlice({
       state.form = { title: '' };
     },
     upVote(state, action: PayloadAction<{ postId: string }>) {
-      const post = state.posts.find((post) => post.id === action.payload.postId);
+      const post = state.posts.find((item) => item.id === action.payload.postId);
       if (post) {
         post.voteCount++;
       }
     },
     downVote(state, action: PayloadAction<{ postId: string }>) {
-      const post = state.posts.find((post) => post.id === action.payload.postId);
+      const post = state.posts.find((item) => item.id === action.payload.postId);
       if (post) {
         post.voteCount--;
       }

@@ -1,6 +1,8 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+
 import { postSlice, postReducer } from '~/entities/post';
+
 const reducers = {
   [postSlice.name]: postReducer,
 };

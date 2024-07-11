@@ -1,14 +1,12 @@
-import { Drawer } from 'expo-router/drawer';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-
-import { useNavigation } from '@react-navigation/native';
-import { DrawerActions } from '@react-navigation/native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
   DrawerItem,
 } from '@react-navigation/drawer';
+import { useNavigation, DrawerActions } from '@react-navigation/native';
+import { Drawer } from 'expo-router/drawer';
 
 interface LeftDrawerProps {
   toggleRightDrawer: () => void;

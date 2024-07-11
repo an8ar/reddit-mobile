@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
 import App from '~/app-root';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.

@@ -15,7 +15,9 @@ export const UserDrawerLayout = ({ children, handleClose }: Props) => {
   return (
     <DrawerContentScrollView contentContainerStyle={{ height: '100%' }}>
       <View className="mb-4 flex flex-row justify-end px-2">
-        <AntDesign name="close" size={32} color="#94a3b8" onPress={handleClose} />
+        <TouchableOpacity onPress={handleClose}>
+          <AntDesign name="close" size={32} color="#94a3b8" />
+        </TouchableOpacity>
       </View>
       <View className="flex-1 px-4">
         <View className="flex-1">{children}</View>

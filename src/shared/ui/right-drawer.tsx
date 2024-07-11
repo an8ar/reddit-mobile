@@ -2,13 +2,11 @@ import React from 'react';
 
 import { Drawer } from 'react-native-drawer-layout';
 
+import { UserDrawerContent } from '~/entities/user';
+
 import { LeftDrawerScreen } from './left-drawer';
 
-interface Props {
-  children: React.ReactNode;
-}
-
-export function RightDrawerScreen({ children }: Props) {
+export function RightDrawerScreen() {
   const [rightDrawerOpen, setRightDrawerOpen] = React.useState(false);
 
   const toggleDrawer = () => {
@@ -20,7 +18,7 @@ export function RightDrawerScreen({ children }: Props) {
       onOpen={() => setRightDrawerOpen(true)}
       onClose={() => setRightDrawerOpen(false)}
       drawerPosition="right"
-      renderDrawerContent={() => <>{children}</>}
+      renderDrawerContent={() => <UserDrawerContent />}
     >
       <LeftDrawerScreen toggleRightDrawer={toggleDrawer} />
     </Drawer>

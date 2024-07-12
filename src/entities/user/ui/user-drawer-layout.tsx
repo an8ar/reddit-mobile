@@ -2,6 +2,7 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import Feather from '@expo/vector-icons/Feather';
 import Octicons from '@expo/vector-icons/Octicons';
 import { DrawerContentScrollView } from '@react-navigation/drawer';
+import { Button } from '@rneui/base';
 import { View, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -21,8 +22,9 @@ export const UserDrawerLayout = ({ children, handleClose }: Props) => {
       </View>
       <View className="flex-1 px-4">
         <View className="flex-1">{children}</View>
+        <Button>wwws</Button>
         <SafeAreaView>
-          <View className="flex-row items-center justify-between py-4">
+          <View className="flex-row items-end justify-between py-4">
             <TouchableOpacity className="flex-row items-center gap-2">
               <Feather name="settings" size={28} color="#94a3b8" />
               <Text className="text-gray-500">Setting</Text>

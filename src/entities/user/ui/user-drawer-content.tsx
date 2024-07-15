@@ -2,6 +2,7 @@ import React from 'react';
 
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { DrawerItem } from '@react-navigation/drawer';
+import { useRouter } from 'expo-router';
 import { View, Text } from 'react-native';
 
 import { UserDrawerLayout } from './user-drawer-layout';
@@ -11,6 +12,7 @@ interface Props {
 }
 
 export const UserDrawerContent = ({ handleClose }: Props) => {
+  const router = useRouter();
   return (
     <UserDrawerLayout handleClose={handleClose}>
       <View className="items-center">
@@ -23,7 +25,7 @@ export const UserDrawerContent = ({ handleClose }: Props) => {
       </View>
       <DrawerItem
         label="Sign-up / Login"
-        onPress={() => console.log('ww')}
+        onPress={() => router.push('(modals)/login')}
         icon={() => <FontAwesome5 name="user-circle" size={24} color="#1c1917" />}
       />
     </UserDrawerLayout>

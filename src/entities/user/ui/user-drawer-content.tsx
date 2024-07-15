@@ -13,6 +13,12 @@ interface Props {
 
 export const UserDrawerContent = ({ handleClose }: Props) => {
   const router = useRouter();
+
+  const handleAuth = () => {
+    handleClose();
+    router.push('(modals)/login');
+  };
+
   return (
     <UserDrawerLayout handleClose={handleClose}>
       <View className="items-center">
@@ -25,7 +31,7 @@ export const UserDrawerContent = ({ handleClose }: Props) => {
       </View>
       <DrawerItem
         label="Sign-up / Login"
-        onPress={() => router.push('(modals)/login')}
+        onPress={handleAuth}
         icon={() => <FontAwesome5 name="user-circle" size={24} color="#1c1917" />}
       />
     </UserDrawerLayout>

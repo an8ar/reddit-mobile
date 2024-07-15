@@ -1,12 +1,17 @@
 import React from 'react';
 
-import { View, Text } from 'react-native';
+import { useRouter } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+import { AuthHeader } from '~/entities/auth';
 
 const Login = () => {
+  const router = useRouter();
+
   return (
-    <View className="">
-      <Text>Login</Text>
-    </View>
+    <SafeAreaView>
+      <AuthHeader />
+    </SafeAreaView>
   );
 };
 

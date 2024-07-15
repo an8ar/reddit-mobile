@@ -10,8 +10,15 @@ const App = () => {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
-        <Stack initialRouteName="(modals)/login">
-          <Stack.Screen name="(modals)/login" options={{ presentation: 'modal' }} />
+        <Stack>
+          <Stack.Screen
+            name="(modals)"
+            options={{
+              presentation: 'fullScreenModal',
+              title: 'auth',
+              headerShown: false,
+            }}
+          />
 
           <Stack.Screen name="(drawers)" options={{ headerShown: false }} />
         </Stack>

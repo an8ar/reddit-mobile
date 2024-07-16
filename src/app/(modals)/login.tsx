@@ -1,18 +1,17 @@
 import React from 'react';
 
-import { useRouter } from 'expo-router';
-import { ScrollView } from 'react-native';
+import { KeyboardAvoidingView, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { LoginWidget } from '~/widgets/auth';
 
 const Login = () => {
-  const router = useRouter();
-
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1">
       <ScrollView>
-        <LoginWidget />
+        <KeyboardAvoidingView behavior="position" keyboardVerticalOffset={50}>
+          <LoginWidget />
+        </KeyboardAvoidingView>
       </ScrollView>
     </SafeAreaView>
   );

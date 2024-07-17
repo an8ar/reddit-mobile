@@ -8,7 +8,6 @@ const ModalsLayout = () => {
       <Stack.Screen
         name="login"
         options={{
-          presentation: 'fullScreenModal',
           title: 'auth',
           headerShown: false,
         }}
@@ -16,7 +15,6 @@ const ModalsLayout = () => {
       <Stack.Screen
         name="sign-up"
         options={{
-          presentation: 'fullScreenModal',
           title: 'auth',
           headerShown: false,
         }}

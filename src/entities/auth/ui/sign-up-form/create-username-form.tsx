@@ -31,7 +31,7 @@ export function CreateUsernameForm() {
   const { setError, handleSubmit } = methods;
 
   const handleContinue = () => {
-    router.push('(modals)/(sign-up)/verify-email');
+    router.push('(modals)/(sign-up)/create-password');
   };
 
   const onSubmit = async (data: FormValuesProps) => {

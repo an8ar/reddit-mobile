@@ -8,8 +8,6 @@ import * as Yup from 'yup';
 
 import { FormProvider, RHFTextField } from '~/shared/hook-form';
 
-import { TermsAndConditions } from '../terms-and-conditions';
-
 type FormValuesProps = {
   verificationCode: string;
 };
@@ -54,8 +52,6 @@ export function VerifyEmailForm() {
         </View>
       </FormProvider>
       <View className="mb-10 items-center" style={{ gap: 20 }}>
-        <TermsAndConditions />
-
         <TouchableOpacity
           className="w-[90%] rounded-full bg-orange-700"
           onPress={handleSubmit(onSubmit)}

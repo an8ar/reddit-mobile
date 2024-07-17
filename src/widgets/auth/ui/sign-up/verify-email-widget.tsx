@@ -2,7 +2,7 @@ import React from 'react';
 
 import { View, Text } from 'react-native';
 
-import { CreateEmailForm, GoBackHeader } from '~/entities/auth';
+import { VerifyEmailForm, GoBackHeader } from '~/entities/auth';
 
 export const VerifyEmailWidget = () => {
   return (
@@ -13,7 +13,7 @@ export const VerifyEmailWidget = () => {
           <Text className="text-center text-2xl font-semibold">Verify your email</Text>
           <Text className="text-center text-lg">Enter the 6 digit code we sent to you</Text>
         </View>
-        <CreateEmailForm />
+        <VerifyEmailForm />
       </View>
     </View>
   );

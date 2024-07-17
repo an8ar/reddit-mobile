@@ -11,8 +11,8 @@ interface Props {
 export const AuthHeader = ({ isLogin }: Props) => {
   const router = useRouter();
 
-  const handleBack = () => {
-    router.replace('(drawers)/(tabs)');
+  const handleModalClose = () => {
+    router.navigate('');
   };
 
   const handleLogin = () => {
@@ -25,7 +25,7 @@ export const AuthHeader = ({ isLogin }: Props) => {
   return (
     <View className="flex-row items-center justify-between">
       <View>
-        <TouchableOpacity onPress={handleBack}>
+        <TouchableOpacity onPress={handleModalClose}>
           <AntDesign name="close" size={32} color="#94a3b8" />
         </TouchableOpacity>
       </View>

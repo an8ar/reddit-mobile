@@ -23,28 +23,27 @@ export const AuthHeader = ({ isLogin }: Props) => {
     router.push('(modals)/(sign-up)/create-email');
   };
   return (
-    <View className="flex-row items-center justify-between">
-      <View>
+    <View className="relative flex-row items-center justify-center">
+      <View className="absolute left-0">
         <TouchableOpacity onPress={handleModalClose}>
           <AntDesign name="close" size={32} color="#94a3b8" />
         </TouchableOpacity>
       </View>
       <View className="relative h-10 w-10">
-        <Image
-          source={require('../../../../assets/images/reddit.png')}
-          className="absolute left-1/2 top-0 h-10 w-10 -translate-x-1/2"
-        />
+        <Image source={require('../../../../assets/images/reddit.png')} className="h-10 w-10" />
       </View>
-      {isLogin && (
-        <TouchableOpacity onPress={handleSignUp}>
-          <Text className="text-lg font-semibold text-gray-500">Sign up</Text>
-        </TouchableOpacity>
-      )}
-      {!isLogin && (
-        <TouchableOpacity onPress={handleLogin}>
-          <Text className="text-lg font-semibold text-gray-500">Login</Text>
-        </TouchableOpacity>
-      )}
+      <View className="absolute right-0">
+        {isLogin && (
+          <TouchableOpacity onPress={handleSignUp}>
+            <Text className="text-lg font-semibold text-gray-500">Sign up</Text>
+          </TouchableOpacity>
+        )}
+        {!isLogin && (
+          <TouchableOpacity onPress={handleLogin}>
+            <Text className="text-lg font-semibold text-gray-500">Login</Text>
+          </TouchableOpacity>
+        )}
+      </View>
     </View>
   );
 };

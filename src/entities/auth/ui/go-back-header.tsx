@@ -4,7 +4,11 @@ import { AntDesign } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { View, TouchableOpacity, Image, Text } from 'react-native';
 
-export const GoBackHeader = () => {
+interface Props {
+  hasSkip?: boolean;
+}
+
+export const GoBackHeader = ({ hasSkip = false }: Props) => {
   const router = useRouter();
 
   const handleBack = () => {
@@ -24,7 +28,7 @@ export const GoBackHeader = () => {
           className="h-10 w-10 -translate-x-1/2"
         />
       </View>
-      <View className="absolute right-0">
+      <View className={`absolute right-0 ${!hasSkip && 'hidden'}`}>
         <TouchableOpacity>
           <Text className="text-lg text-gray-700">Skip</Text>
         </TouchableOpacity>

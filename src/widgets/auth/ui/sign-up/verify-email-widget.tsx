@@ -7,7 +7,7 @@ import { VerifyEmailForm, GoBackHeader } from '~/entities/auth';
 export const VerifyEmailWidget = () => {
   return (
     <View className="p-2">
-      <GoBackHeader />
+      <GoBackHeader hasSkip />
       <View className="mt-10">
         <View>
           <Text className="text-center text-2xl font-semibold">Verify your email</Text>

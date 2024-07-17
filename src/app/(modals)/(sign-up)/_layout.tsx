@@ -17,6 +17,12 @@ const SignUpLayout = () => {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="create-username"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 };

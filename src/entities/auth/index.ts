@@ -5,3 +5,4 @@ export * from './ui/sign-up-form/create-email-form';
 export * from './ui/go-back-header';
 export * from './ui/sign-up-form/verify-email-form';
 export * from './ui/sign-up-form/create-username-form';
+export * from './ui/sign-up-form/create-password-form';

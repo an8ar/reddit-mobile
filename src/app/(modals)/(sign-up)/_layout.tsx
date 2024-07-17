@@ -2,17 +2,11 @@ import React from 'react';
 
 import { Stack } from 'expo-router';
 
-const ModalsLayout = () => {
+const SignUpLayout = () => {
   return (
     <Stack>
       <Stack.Screen
-        name="login"
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="(sign-up)"
+        name="create-email"
         options={{
           headerShown: false,
         }}
@@ -21,4 +15,4 @@ const ModalsLayout = () => {
   );
 };
 
-export default ModalsLayout;
+export default SignUpLayout;

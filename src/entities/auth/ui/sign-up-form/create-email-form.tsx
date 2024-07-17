@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useRouter } from 'expo-router';
 import { useForm } from 'react-hook-form';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import * as Yup from 'yup';
@@ -22,6 +23,8 @@ const defaultValues = {
 };
 
 export function CreateEmailForm() {
+  const router = useRouter();
+
   const methods = useForm<FormValuesProps>({
     resolver: yupResolver(CreateEmailSchema),
     defaultValues,
@@ -29,9 +32,14 @@ export function CreateEmailForm() {
 
   const { setError, handleSubmit } = methods;
 
+  const handleContinue = () => {
+    router.push('(modals)/(sign-up)/verify-email');
+  };
+
   const onSubmit = async (data: FormValuesProps) => {
     try {
       console.log(data);
+      handleContinue();
     } catch (error: unknown) {
       console.log(error);
       setError('email', { message: 'Email is not valid', type: 'custom' });

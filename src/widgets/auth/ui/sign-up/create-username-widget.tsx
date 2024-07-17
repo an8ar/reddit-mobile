@@ -7,7 +7,7 @@ import { CreateUsernameForm, GoBackHeader } from '~/entities/auth';
 export const CreateUsernameWidget = () => {
   return (
     <View className="p-2">
-      <GoBackHeader hasSkip />
+      <GoBackHeader />
       <View className="mt-10">
         <View>
           <Text className="text-center text-2xl font-semibold">Create your username</Text>

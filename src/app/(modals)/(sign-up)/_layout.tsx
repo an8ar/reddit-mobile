@@ -23,6 +23,12 @@ const SignUpLayout = () => {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="create-password"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useNavigation } from '@react-navigation/native';
 import { useForm } from 'react-hook-form';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import * as Yup from 'yup';
@@ -23,13 +22,7 @@ const defaultValues = {
   password: '',
 };
 
-interface LoginFormProps {
-  isClient: boolean;
-}
-
 export function LoginForm() {
-  const navigation = useNavigation();
-
   const methods = useForm<FormValuesProps>({
     resolver: yupResolver(LoginSchema),
     defaultValues,
@@ -80,5 +73,3 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
 });
-
-export default LoginForm;

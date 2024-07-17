@@ -20,7 +20,7 @@ export const AuthHeader = ({ isLogin }: Props) => {
   };
 
   const handleSignUp = () => {
-    router.push('(modals)/sign-up');
+    router.push('(modals)/(sign-up)/create-email');
   };
   return (
     <View className="flex-row items-center justify-between">

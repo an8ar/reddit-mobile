@@ -15,7 +15,6 @@ const App = () => {
             name="(modals)"
             options={{
               presentation: 'fullScreenModal',
-              title: 'auth',
               headerShown: false,
             }}
           />

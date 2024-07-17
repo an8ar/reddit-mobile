@@ -48,5 +48,3 @@ export const AuthHeader = ({ isLogin }: Props) => {
     </View>
   );
 };
-
-export default AuthHeader;

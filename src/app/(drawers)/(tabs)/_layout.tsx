@@ -14,6 +14,10 @@ export default function TabLayout() {
           paddingTop: 4,
         },
       }}
+      sceneContainerStyle={{
+        paddingTop: 4,
+        backgroundColor: 'white',
+      }}
     >
       <Tabs.Screen
         name="index"

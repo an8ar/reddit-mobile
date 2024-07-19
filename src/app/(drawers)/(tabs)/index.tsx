@@ -1,13 +1,23 @@
 import React from 'react';
 
-import { View, Text, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
+
+import { PostCardWidget } from '~/widgets/post';
 
 const Home = () => {
   return (
-    <ScrollView contentContainerStyle={{ height: '100%' }}>
-      <View>
-        <Text>Hdfme</Text>
-      </View>
+    <ScrollView contentContainerStyle={{ flexGrow: 1 }} className="">
+      <PostCardWidget />
+      <PostCardWidget />
+
+      <PostCardWidget />
+
+      <PostCardWidget />
+
+      <PostCardWidget />
+      <PostCardWidget />
+
+      <PostCardWidget />
     </ScrollView>
   );
 };

@@ -1,3 +1,4 @@
+import AntDesign from '@expo/vector-icons/AntDesign';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -46,7 +47,7 @@ export default function TabLayout() {
         name="inbox"
         options={{
           title: 'Inbox',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="chat" size={32} color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="message1" size={32} color={color} />,
         }}
       />
       <Tabs.Screen

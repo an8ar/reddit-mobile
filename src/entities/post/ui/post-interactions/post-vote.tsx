@@ -33,13 +33,13 @@ export const PostVote = () => {
       <TouchableOpacity onPress={handleUpVote} className="py-1">
         {voteState === 'upVoted' ? (
           <Image
-            source={require('.././../../../assets/images/arrow-down-filled.png')}
+            source={require('../.././../../../assets/images/arrow-down-filled.png')}
             className="h-4 w-4 rotate-180"
             style={{ tintColor: '#ff8800' }}
           />
         ) : (
           <Image
-            source={require('.././../../../assets/images/arrow-down.png')}
+            source={require('../../../../../assets/images/arrow-down.png')}
             className="h-4 w-4 rotate-180"
           />
         )}
@@ -52,13 +52,13 @@ export const PostVote = () => {
       <TouchableOpacity onPress={handleDownVote} className="py-1">
         {voteState === 'downVoted' ? (
           <Image
-            source={require('.././../../../assets/images/arrow-down-filled.png')}
+            source={require('../../../../../assets/images/arrow-down-filled.png')}
             className="h-4 w-4 fill-purple-500"
             style={{ tintColor: '#7011e4' }}
           />
         ) : (
           <Image
-            source={require('.././../../../assets/images/arrow-down.png')}
+            source={require('../../../../../assets/images/arrow-down.png')}
             className="h-4 w-4"
           />
         )}

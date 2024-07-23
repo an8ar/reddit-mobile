@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { RightDrawerScreen } from '~/shared';
+import { RightDrawerScreen } from '~/pages/drawer';
 
 const DrawerLayout = () => {
   return <RightDrawerScreen />;

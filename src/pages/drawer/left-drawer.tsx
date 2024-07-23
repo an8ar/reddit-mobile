@@ -7,7 +7,6 @@ import {
 } from '@react-navigation/drawer';
 import { useNavigation, DrawerActions } from '@react-navigation/native';
 import { Drawer } from 'expo-router/drawer';
-import { View } from 'react-native';
 
 import { CommunitiesAccordion } from '~/entities/community';
 
@@ -51,9 +50,8 @@ export const LeftDrawerScreen = ({ toggleRightDrawer }: LeftDrawerProps) => {
 function CustomDrawerContent(props: DrawerContentComponentProps) {
   return (
     <DrawerContentScrollView {...props}>
-      <View>
-        <CommunitiesAccordion />
-      </View>
+      <CommunitiesAccordion />
+
       <DrawerItem label="Home" onPress={() => props.navigation.navigate('communities')} />
 
       <DrawerItem label="Settings" onPress={() => props.navigation.navigate('chat')} />

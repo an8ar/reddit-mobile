@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign, FontAwesome } from '@expo/vector-icons';
 import { ListItem } from '@rneui/themed';
+import { Text } from 'react-native';
 
 export const CommunitiesAccordion = () => {
   const [expanded, setExpanded] = useState(false);
@@ -19,11 +20,21 @@ export const CommunitiesAccordion = () => {
       onPress={() => {
         setExpanded(!expanded);
       }}
+      className="space-y-2"
     >
-      <ListItem bottomDivider>
-        <ListItem.Content className="flex-row items-center justify-start gap-2 p-2">
+      <ListItem>
+        <ListItem.Content className="flex-row items-center justify-start gap-2">
           <AntDesign name="plus" size={20} color="black" />
           <ListItem.Title className="text-sm">Create a community</ListItem.Title>
+        </ListItem.Content>
+      </ListItem>
+      <ListItem bottomDivider>
+        <ListItem.Content className="flex-row items-center justify-start gap-2">
+          <FontAwesome name="reddit" size={20} color="#ea580c" />
+          <ListItem.Title className="text-sm">r/announcements</ListItem.Title>
+          <Text className="flex-1 text-right">
+            <AntDesign name="staro" size={20} color="black" />
+          </Text>
         </ListItem.Content>
       </ListItem>
     </ListItem.Accordion>

@@ -1,14 +1,9 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import {
-  DrawerContentComponentProps,
-  DrawerContentScrollView,
-  DrawerItem,
-} from '@react-navigation/drawer';
 import { useNavigation, DrawerActions } from '@react-navigation/native';
 import { Drawer } from 'expo-router/drawer';
 
-import { CommunitiesAccordion } from '~/entities/community';
+import { LeftDrawerContent } from '~/entities/drawer';
 
 interface LeftDrawerProps {
   toggleRightDrawer: () => void;
@@ -43,18 +38,7 @@ export const LeftDrawerScreen = ({ toggleRightDrawer }: LeftDrawerProps) => {
         headerRightContainerStyle: { paddingRight: 12 },
         headerLeftContainerStyle: { paddingLeft: 12 },
       }}
-      drawerContent={(props) => <CustomDrawerContent {...props} />}
+      drawerContent={(props) => <LeftDrawerContent {...props} />}
     />
   );
 };
-function CustomDrawerContent(props: DrawerContentComponentProps) {
-  return (
-    <DrawerContentScrollView {...props}>
-      <CommunitiesAccordion />
-
-      <DrawerItem label="Home" onPress={() => props.navigation.navigate('communities')} />
-
-      <DrawerItem label="Settings" onPress={() => props.navigation.navigate('chat')} />
-    </DrawerContentScrollView>
-  );
-}

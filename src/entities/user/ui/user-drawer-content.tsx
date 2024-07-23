@@ -5,8 +5,6 @@ import { DrawerItem } from '@react-navigation/drawer';
 import { useRouter } from 'expo-router';
 import { View, Text } from 'react-native';
 
-import { UserDrawerLayout } from './user-drawer-layout';
-
 interface Props {
   handleClose: () => void;
 }
@@ -20,7 +18,7 @@ export const UserDrawerContent = ({ handleClose }: Props) => {
   };
 
   return (
-    <UserDrawerLayout handleClose={handleClose}>
+    <>
       <View className="items-center">
         <FontAwesome5 name="user-circle" size={20 * 4} color="#9ca3af" />
       </View>
@@ -34,6 +32,6 @@ export const UserDrawerContent = ({ handleClose }: Props) => {
         onPress={handleAuth}
         icon={() => <FontAwesome5 name="user-circle" size={24} color="#1c1917" />}
       />
-    </UserDrawerLayout>
+    </>
   );
 };
